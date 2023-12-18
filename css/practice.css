@@ -1,64 +1,101 @@
-body{
-    margin: none;
-    padding: none;
+@font-face {
+    font-family: akaya;
+    src: url(./../font/product-sans/Product\ Sans\ Regular.ttf);
 }
 
+@font-face {
+    font-family: rubik;
+    src: url(./../font/Rubik_Doodle_Shadow/RubikDoodleShadow-Regular.ttf);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: akaya;
+
+
+
+
+}
+
+
+
+
+
 /* nav bar */
-nav{
+nav {
     width: 100%;
     height: 70px;
 
-    box-shadow: 7px 12px 15px -3px rgba(0,0,0,0.1);
+
+    background-color: white;
+    box-shadow: 7px 12px 15px -3px rgba(0, 0, 0, 0.1);
+
+    position: sticky;
+    top: 0;
+
+    border-radius: 10px;
+
+    user-select: none;
 
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+
 }
 
+
 /* nav icon */
-.navicon{
+.navicon {
     width: 150px;
 }
 
 /* second div of nav bar */
-nav>div:nth-of-type(2){
-    width: 60%;
+nav>div:nth-of-type(2) {
+    width: 50%;
 }
 
 /* menubar of nav bar */
-.navbar-menu-dropdown{
+.navbar-menu-dropdown {
     width: 100%;
-    list-style:none;
+    list-style: none;
     user-select: none;
     cursor: pointer;
 
     display: flex;
     justify-content: space-around;
+    align-items: center;
+
+    padding: 30px;
 }
 
 
 /* dropdown-arrow img of menu bar */
-.dropdown-arrow{
-    width: 10px;  
+.dropdown-arrow {
+    width: 10px;
 }
 
 
 /* Company(first li)  */
-.navbar-menu-dropdown>li:nth-child(1){
+/* .navbar-menu-dropdown>li:nth-child(1){
     padding-bottom: 35px;
     
-}
+} */
 
-/* Company(first li)'s dropdown  */
-.navbar-menu-dropdown>li:nth-child(1)>ul{
+/* Company(first li)'s dropdown & Game(third li)'s dropdown & Blockchain(fourth li)'s dropdown */
+.navbar-menu-dropdown>li:nth-child(1)>ul,
+.navbar-menu-dropdown>li:nth-child(3)>ul,
+.navbar-menu-dropdown>li:nth-child(4)>ul {
     width: 20%;
 
     line-height: 2;
-    
+
     list-style: none;
 
-    position:absolute;
-    top:100px;
+    position: absolute;
+    top: 100px;
 
-    border-radius: 20px;
+    border-radius: 10px;
 
     display: flex;
     flex-direction: column;
@@ -68,17 +105,567 @@ nav>div:nth-of-type(2){
 }
 
 /* Company(first li)'s hover */
-.navbar-menu-dropdown>li:nth-child(1):hover{
-   
-    border-bottom:2px solid rgba(190, 10, 10, 0.858);
+.navbar-menu-dropdown>li:nth-child(1):hover,
+.navbar-menu-dropdown>li:nth-child(2):hover,
+.navbar-menu-dropdown>li:nth-child(3):hover,
+.navbar-menu-dropdown>li:nth-child(4):hover,
+.navbar-menu-dropdown>li:nth-child(5):hover,
+.navbar-menu-dropdown>li:nth-child(6):hover {
+    border-bottom: 2px solid rgba(190, 10, 10, 0.858);
 }
 
-
-.navbar-menu-dropdown>li:nth-child(1):hover ul{
+/* Company dropdwon, Services dropdown, Game dropdown, Hire Developers dropdown & Blockchain dropdown hover is here */
+.navbar-menu-dropdown>li:nth-child(1):hover ul,
+.navbar-menu-dropdown li:nth-child(2):hover table,
+.navbar-menu-dropdown>li:nth-child(3):hover ul,
+.navbar-menu-dropdown>li:nth-child(5):hover table,
+.navbar-menu-dropdown>li:nth-child(4):hover ul,
+.phone-contact>section {
     padding: 20px;
     transition: 1s;
     background-color: white;
-    box-shadow: 0px 10px 20px 3px rgba(0,0,0,0.1);
+    box-shadow: 0px 10px 20px 3px rgba(0, 0, 0, 0.1);
 
     display: flex;
+}
+
+/* second dropdown starts here */
+nav div:nth-of-type(2) table tr th {
+    width: 200px;
+    color: rgba(24, 24, 121, 0.769);
+    text-align: start;
+}
+
+nav div:nth-of-type(2) table tr td {
+    padding-left: 10px;
+    font-size: 13px;
+    color: gray;
+}
+
+/* Services(second li)'s dropdown  */
+nav div:nth-of-type(2) table {
+    width: 1000px;
+
+    display: none;
+    border-radius: 10px;
+
+    position: absolute;
+    top: 100px;
+    right: 100px;
+}
+
+/* Services(second li)'s dropdwon's hover & Hire Developers(fifth li)'s dropdown's hover */
+.navbar-menu-dropdown li:nth-child(2):hover table {
+    display: block;
+
+}
+
+/* Second dropdown ends here */
+
+/* Hire Developers(fifth li)'s table display */
+.navbar-menu-dropdown>li:nth-child(5)>table {
+    display: none;
+}
+
+/* Third div of nav bar */
+nav>div:nth-child(3) {
+    width: 20%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+/* phone contact css codes of third div */
+
+.phone-contact {
+    width: 50px;
+    height: 50px;
+
+    background: linear-gradient(45deg, rgb(255, 7, 7), yellow);
+
+    border-radius: 50%;
+
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* icon color change css codes */
+.fa-phone-volume {
+    font-size: 20px;
+    color: white;
+}
+
+/* phone-contact css codes here */
+
+
+.phone-contact>section {
+    display: none;
+
+    position: absolute;
+    top: 100px;
+    right: 30px;
+}
+
+.phone-contact>section>header {
+    width: 100%;
+}
+
+.phone-contact>section>fieldset {
+    border-style: dotted;
+    width: 90%;
+
+    margin: 0 auto 10px;
+}
+
+.phone-contact section fieldset td img,
+.phone-contact footer table tr:nth-child(2) img {
+    width: 30px;
+    border-radius: 100%;
+}
+
+.phone-contact section footer {
+    width: 100%;
+
+    background-color: rgba(0, 0, 255, 0.795);
+    color: white;
+
+    padding: 10px;
+}
+
+
+
+/* phone contact hover part is here */
+.phone-contact:hover {
+    background: linear-gradient(45deg, blue, white);
+    transition: 1s;
+}
+
+.phone-contact:hover section {
+    display: block;
+
+}
+
+/* Request a quote css codes */
+nav div:nth-child(3)>div:nth-child(2) {
+    width: 70%;
+    height: 70px;
+
+    display: flex;
+    align-items: center;
+}
+
+nav div:nth-child(3)>div:nth-child(2) .req-a-quote {
+    width: 160px;
+    height: 50px;
+
+    background: linear-gradient(45deg, rgb(156, 101, 1), orange, white);
+
+    border-radius: 20px;
+
+    cursor: pointer;
+
+    text-align: center;
+    line-height: 50px;
+
+    color: white;
+}
+
+/* section part starts here */
+
+/* background wallpaper for intro CSS codes */
+.intropage {
+
+    background: url(./../img/backgroundphoto/bg3\ \(2\).jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 0px 45%;
+
+    height: 88vh;
+
+
+}
+
+/* homepage starts here */
+section>.intropage>.homepage {
+    width: 100%;
+    height: 50vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* section part search bar CSS codes start here */
+section>.intropage>.homepage>div:nth-child(2) form {
+    display: flex;
+}
+
+section>.homepage>div:nth-child(2)>div:nth-child(1) {
+    width: 350px;
+    height: 50px;
+
+    user-select: none;
+
+
+
+}
+
+
+
+section>.intropage>.homepage>div:nth-child(2) .searchbar input {
+    width: 350px;
+    box-sizing: border-box;
+    height: 50px;
+
+    outline-color: lightskyblue;
+    border: none;
+
+    padding: 20px;
+
+    border-radius: 50px 0 0 50px;
+}
+
+
+section>.intropage>.homepage>div:nth-child(2) button {
+    width: 130px;
+    height: 50px;
+
+    cursor: pointer;
+
+    border: none;
+    background-color: rgba(25, 86, 25, 0.662);
+
+    font-family: akaya;
+
+    border-radius: 0 50px 50px 0;
+
+    color: white;
+    font-size: 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+/* section part search bar ends here */
+
+/* hiring part starts here */
+.hiringpart {
+    height: 100vh;
+
+    background: url(./../img/backgroundphoto/background2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0 50%;
+}
+
+.hiringpart>div:nth-child(1) {
+    width: 100%;
+    height: 25vh;
+
+    font-size: 40px;
+    font-weight: 900;
+    font-family: rubik;
+    color: rgb(15, 15, 91);
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.hiringpart>p {
+    width: 70%;
+
+    margin: 0 auto;
+
+    text-align: center;
+    line-height: 1.5;
+}
+
+.hiringpart>p+.card-container {
+    width: 100%;
+
+    display: flex;
+    justify-content: space-around;
+}
+
+
+
+
+/* loading part CSS codes here */
+.loading {
+    width: 50%;
+}
+
+.hiringpart .loading img {
+    position: absolute;
+    top: 150vh;
+    left: 150px;
+
+
+    border-radius: 100%;
+}
+
+/* card part for information CSS codes here */
+.card-container {
+    width: 100%;
+    height: 100vh;
+
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.card-container>.card {
+    width: 500px;
+    height: 500px;
+
+    background-color: rgb(11, 11, 124);
+
+    margin-top: 20px;
+
+    border: 4px solid rgb(15, 15, 89);
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.726);
+
+}
+
+.card-container>.card header {
+    width: 500px;
+    height: 200px;
+
+}
+
+/* image part is here */
+.card-container>.card header img {
+    width: 500px;
+    transition: 1s;
+}
+
+.card-container>.card header img:hover {
+    width: 550px;
+
+
+}
+
+
+
+/* article part is here */
+.card-container>.card article {
+    padding: 0 20px;
+    margin-top: 10px;
+}
+
+.card-container>.card article a {
+    color: white;
+    font-size: 25px;
+    font-weight: 700;
+    letter-spacing: 1px;
+
+}
+
+.card-container>.card article p {
+    color: white;
+    font-size: 15px;
+    line-height: 1.5;
+
+    margin: 10px 0 0 0;
+    padding: 0;
+
+}
+
+/* footer part is here */
+.card-container>.card footer {
+    display: flex;
+}
+
+.card-container>.card footer div:nth-child(1),
+.card-container>.card footer div:nth-child(2) {
+    width: 50%;
+    line-height: 1.9;
+
+    color: white;
+}
+
+.card-container>.card footer ul {
+    list-style-type: none;
+
+}
+
+.card-container>.card footer a {
+    color: white;
+}
+
+.card-container>.card footer li::before {
+    content: '>  ';
+
+}
+
+#color {
+    background-color: brown;
+    border-color: brown;
+}
+
+/* New card part and data show part CSS codes here */
+#card-height {
+    height: 350px;
+}
+
+.card-container>div:nth-child(2)#card-height {
+    background: url(./../img/backgroundphoto/callcenter.avif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.7;
+
+    border-color: white;
+
+}
+
+.card-container>div:nth-child(2)#card-height>header {
+    width: 100%;
+    height: 40%;
+
+    display: flex;
+    align-items: flex-end;
+
+    padding: 10px;
+}
+
+.card-container>div:nth-child(2)#card-height>footer {
+    padding: 10px;
+
+
+}
+
+.card-container>div:nth-child(2)#card-height button {
+    width: 200px;
+    height: 50px;
+
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+
+    color: white;
+    font-weight: 700;
+
+    background-color: grey;
+
+    transition: 1s;
+
+}
+
+.card-container>div:nth-child(2)#card-height button .fa-phone {
+    margin-left: 10px;
+
+    display: none;
+
+    transition: 1s;
+}
+
+.card-container>div:nth-child(2)#card-height button:hover {
+    width: 210px;
+    height: 60px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-container>div:nth-child(2)#card-height button:hover .fa-phone {
+    display: block;
+}
+
+
+.datashowcard {
+    width: 90%;
+    height: 250px;
+
+    margin: 0 auto;
+
+    background-color: rgb(8, 8, 62);
+
+    opacity: 0.9;
+
+    border-radius: 20px;
+}
+
+.datashowcard h1 {
+    text-align: center;
+    padding-top: 20px;
+
+    color: white;
+    font-size: 40px;
+    word-spacing: 4px;
+    letter-spacing: 2px;
+}
+
+.datashowcard h1 span:nth-child(1) {
+    display: inline-block;
+    width: 200px;
+    height: 120px;
+    background-image: var(--bg-img);
+    background-repeat: no-repeat;
+    background-size: 200px;
+    
+
+    position: absolute;
+    left: 50px;
+    top: 395vh;
+}
+
+:root {
+    --bg-img: url(./../img/datashowcard/pencil.png)
+}
+
+.datashowcard h1 span:nth-of-type(3){
+width: 100px;
+height: 100px;
+
+display: inline-block;
+
+background-image: var(--bg-img-2);
+background-size: 70px;
+background-repeat: no-repeat;
+
+position: absolute;
+right: 100px;
+}
+
+:root{
+    --bg-img-2:url(./../img/datashowcard/line.png)
+}
+
+.datashowcard h1 span:nth-of-type(2) {
+    color: rgb(76, 206, 255);
+}
+
+.datashowcard table {
+    width: 95%;
+    margin: 0 auto;
+
+    text-align: center;
+}
+
+.datashowcard table tr:nth-child(1) {
+    color: rgb(76, 206, 255);
+    font-size: 50px;
+    letter-spacing: 3px;
+    font-weight: 900;
+}
+
+.datashowcard table tr:nth-child(2) {
+    color: white;
+    font-size: 15px;
 }
