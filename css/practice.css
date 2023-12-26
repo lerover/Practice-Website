@@ -12,6 +12,7 @@
     font-family: inter;
     src: url(./../font/Inter/Inter-VariableFont_slnt\,wght.ttf);
 }
+
 body {
     margin: 0;
     padding: 0;
@@ -622,7 +623,7 @@ section>.intropage>.homepage>div:nth-child(2) button {
     background-image: var(--bg-img);
     background-repeat: no-repeat;
     background-size: 200px;
-    
+
 
     position: absolute;
     left: 50px;
@@ -633,22 +634,22 @@ section>.intropage>.homepage>div:nth-child(2) button {
     --bg-img: url(./../img/datashowcard/pencil.png)
 }
 
-.datashowcard h1 span:nth-of-type(3){
-width: 100px;
-height: 100px;
+.datashowcard h1 span:nth-of-type(3) {
+    width: 100px;
+    height: 100px;
 
-display: inline-block;
+    display: inline-block;
 
-background-image: var(--bg-img-2);
-background-size: 70px;
-background-repeat: no-repeat;
+    background-image: var(--bg-img-2);
+    background-size: 70px;
+    background-repeat: no-repeat;
 
-position: absolute;
-right: 100px;
+    position: absolute;
+    right: 100px;
 }
 
-:root{
-    --bg-img-2:url(./../img/datashowcard/line.png)
+:root {
+    --bg-img-2: url(./../img/datashowcard/line.png)
 }
 
 .datashowcard h1 span:nth-of-type(2) {
@@ -676,9 +677,9 @@ right: 100px;
 
 /* vlog section CSS codes starts here */
 
-.vlog-part{
+.vlog-part {
     height: 100vh;
-    
+
     box-sizing: border-box;
 
     padding: 50px 100px 10px;
@@ -688,51 +689,53 @@ right: 100px;
     justify-content: space-between;
 }
 
-.vlog-part header{
+.vlog-part header {
     word-spacing: 10px;
 }
 
-.vlog-part header span{
+.vlog-part header span {
     font-size: 42px;
-   font-family: inter;
- 
+    font-family: inter;
+
 }
 
-.vlog-part header span:nth-of-type(2), .vlog-part header span:nth-of-type(4){
+.vlog-part header span:nth-of-type(2),
+.vlog-part header span:nth-of-type(4) {
     font-weight: 900;
 }
 
-.vlog-part p{
-    word-spacing:2px;
+.vlog-part p {
+    word-spacing: 2px;
+    font-size: 20px;
 }
 
-.vlog-part table{
+.vlog-part table {
     border-width: 10px;
 }
 
-.vlog-part table td{
+.vlog-part table td {
     width: 30%;
 
 }
 
-.vlog-part table img{
+.vlog-part table img {
     width: 95%;
 
     transition: 0.3s;
 }
 
-.vlog-part table tr:nth-of-type(2) a{
+.vlog-part table tr:nth-of-type(2) a {
     text-decoration: none;
 
     color: black;
 }
 
-.vlog-part div{
+.vlog-part div {
     text-align: center;
     padding: 40px;
 }
 
-.vlog-part div a{
+.vlog-part div a {
     width: 150px;
     height: 50px;
 
@@ -748,9 +751,54 @@ right: 100px;
 
     color: white;
 
-    font-size: 15px;
+    font-size: 20px;
 }
 
-.vlog-part table tr:nth-of-type(2) a:hover{
-color: #0076ff;
+.vlog-part table tr:nth-of-type(2) a:hover {
+    color: #0076ff;
+}
+
+footer.footer-part1 {
+    width: 100%;
+
+    height: 100vh;
+
+   display: flex;
+   align-items: center;
+}
+
+.footer-part1 .containerinsiderfooterone{
+    width: 100%;
+    height: 50%;
+
+    background: var(--bg-footer);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-color: #202020;
+
+    
+}
+
+:root{
+    --bg-footer:url(./../img/footerpartone/footer-bg.png)
+}
+
+.footer-part1 .containerinsiderfooterone .partone table{
+    width: 30%;
+}
+
+.footer-part1 .containerinsiderfooterone .partone td:nth-of-type(1){
+    
+    display: flex;
+}
+
+.footer-part1 .containerinsiderfooterone .partone td:nth-of-type(1) img{
+    width: 30px;
+}
+
+.footer-part1 .containerinsiderfooterone .partone td:nth-of-type(1) h1{
+    font-family: inter;
+    color: rgb(255, 145, 0);
+    
 }
